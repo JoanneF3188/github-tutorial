@@ -66,7 +66,10 @@ SSH Keys are what connects your remote file to your local file
 6. Type "Hello World!" into the file
     * Make sure that the circle dot next to the file name in the tab is changed into an x by saving the file through file->save or hold the command key and press s.
 7. Now type `git add .` to add all the files, in this case the only file, that you edited to the stage of the git, ready to be kept a copy of what you added into your file
-
+8. Then, type `git commit -m "Add Hello World! to the README file"`.
+    * You are now keeping a copy of another version of your code, in this case what you added to your code.
+    * _ALWAYS WRITE YOUR COMMITS IN PRESENT TENSE_ because when you refer back to this commit, you will know what you have to do to come to that code.
+9. Finally, all you have to do now is type `git push` because you have already pushed the universal file to the remote. So, all you have to do now after every add and commit is to just do `git push`.
 
 ---
 ## Workflow & Commands
