@@ -79,6 +79,12 @@ One more thing..
 
 * When you type `git status`, this comman allows you to basically check the status of what you still need to add on to commit, making sure that you are keeping different versions of the code, in case you want to refer to previous code or made a mistake in the previous code.
     * If you have made changes to your README.md file and saved, when you type `git status`, You should see a lot of words on the top and then, **`modified:   README.md`** in red somewhere in the middle this means that you have saved the file but you need to place it on to the stage
-    * Once you have
+    * Once you have added the file to the stage, when you type `git status`, the **`modimodified:   README.md`** should turn green, showing that you have to commit it to keep a version of the code that you worked on.
+    * After commiting the file, it should say  
+    _"On branch master  
+    Your branch is ahead of 'origin/master' by 1 commit.  
+    (use "git push" to publish your local commits)   
+    nothing to commit, working directory clean"_, showing that you have kept a version of the edited file
+    * Finally, all you have to do now is push the file up into the remote and you now have the visual copy in GitHub.
 
 Now that you know the basics to how you can connect your local machine to your remote machine and how to share it so that other people can see your code, or push your code, you can now practice on your own and see what amazing things you can do with Cloud 9 and GitHub.
