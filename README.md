@@ -68,8 +68,17 @@ SSH Keys are what connects your remote file to your local file
 7. Now type `git add .` to add all the files, in this case the only file, that you edited to the stage of the git, ready to be kept a copy of what you added into your file
 8. Then, type `git commit -m "Add Hello World! to the README file"`.
     * You are now keeping a copy of another version of your code, in this case what you added to your code.
-    * _ALWAYS WRITE YOUR COMMITS IN PRESENT TENSE_ because when you refer back to this commit, you will know what you have to do to come to that code.
+    * _ALWAYS WRITE YOUR COMMITS IN PRESENT TENSE_ because when you refer back to this commit, you will know what you have to do to come to how the file looks now.
 9. Finally, all you have to do now is type `git push` because you have already pushed the universal file to the remote. So, all you have to do now after every add and commit is to just do `git push`.
+    * This pushes the changes that you have made and saved a copy of into the remote, GitHub.
 
 ---
 ## Workflow & Commands
+
+One more thing..
+
+* When you type `git status`, this comman allows you to basically check the status of what you still need to add on to commit, making sure that you are keeping different versions of the code, in case you want to refer to previous code or made a mistake in the previous code.
+    * If you have made changes to your README.md file and saved, when you type `git status`, You should see a lot of words on the top and then, **`modified:   README.md`** in red somewhere in the middle this means that you have saved the file but you need to place it on to the stage
+    * Once you have
+
+Now that you know the basics to how you can connect your local machine to your remote machine and how to share it so that other people can see your code, or push your code, you can now practice on your own and see what amazing things you can do with Cloud 9 and GitHub.
