@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>GitHub How-To by JoanneF3188</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/JoanneF3188/github-tutorial">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>GitHub How-To</h1>
+            <h2>How to GitHub</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/JoanneF3188/github-tutorial/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/JoanneF3188/github-tutorial/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="github-tutorial" class="anchor" href="#github-tutorial" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitHub Tutorial</h1>
+
+<p><em>by Joanne Fung</em></p>
+
+<hr>
+
+<h2>
+<a id="git-vs-github" class="anchor" href="#git-vs-github" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git vs. GitHub</h2>
+
+<ul>
+<li>
+<h3>
+<a id="what-is-git" class="anchor" href="#what-is-git" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Git?</h3>
+
+<p><strong>Git</strong> is a workspace that is for <em>your own self</em>. It's a place where you can keep different versions of the code that you type. This is <em>different</em> because Git is a workspace that is mainly for you to keep track of what you have commited or edited to the project.</p>
+</li>
+<li>
+<h3>
+<a id="what-is-github" class="anchor" href="#what-is-github" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is GitHub?</h3>
+
+<p><strong>GitHub</strong> is a workspace that is used so that other people can <em>contribute</em> to your project or <em>see the changes</em> that you have made to the project itself. People can contribute by cloning, forking or sending you pull requests if they have anything they would want to add to your project. Also, <strong>Git</strong> is needed in order for <strong>GitHub</strong> to work.</p>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="initial-setup" class="anchor" href="#initial-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial Setup</h2>
+
+<h4>
+<a id="materials" class="anchor" href="#materials" aria-hidden="true"><span class="octicon octicon-link"></span></a>Materials:</h4>
+
+<ul>
+<li><a href="https://github.com/join">GitHub Account</a></li>
+<li><a href="https://c9.io">Cloud 9 Account (Or click the GitHub icon on upper right hand corner to sign in with your Git Hub)</a></li>
+</ul>
+
+<h3>
+<a id="adding-ssh-keys-" class="anchor" href="#adding-ssh-keys-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding SSH Keys-</h3>
+
+<p>SSH Keys are what connects your remote file to your local file</p>
+
+<h4>
+<a id="steps" class="anchor" href="#steps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steps:</h4>
+
+<ol>
+<li>Go to the settings icon on the upper right hand corner in Cloud 9 once you have logged into Cloud 9</li>
+<li>Go to the <strong>SSH Keys</strong> tab, there, you will find your default SSH key, where you copy and paste into GitHub
+
+<ul>
+<li>Click on your profile icon and scroll down to settings and then click the <strong>SSH Keys</strong> tab</li>
+<li>Click the button that says <strong>Add SSH key</strong>
+</li>
+<li>Title it Cloud 9</li>
+<li>Paste the SSH Keys that you copied from Cloud 9 and paste it into the box that says <strong>Key</strong>
+</li>
+<li>Click <strong>Add Key</strong> and now your local file is connected to your remote file!</li>
+</ul>
+</li>
+</ol>
+
+<h2>
+<a id="initializing-git-in-cloud-9" class="anchor" href="#initializing-git-in-cloud-9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initializing Git in Cloud 9</h2>
+
+<h4>
+<a id="steps-1" class="anchor" href="#steps-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steps:</h4>
+
+<ol>
+<li>Make 2 directories in your local machine, Cloud 9.
+
+<ul>
+<li><code>mkdir github-learning</code></li>
+<li><code>mkdir first-practice</code></li>
+</ul>
+</li>
+<li>
+<p>Make a <code>README.md</code> file (<strong>!!!!CD INTO THE DIRECTORIES FIRST!!!!</strong>)</p>
+
+<ul>
+<li><code>cd github-learning</code></li>
+<li><code>cd first-practice</code></li>
+<li><code>touch README.md</code></li>
+</ul>
+</li>
+<li>
+<p>Initialize the directory in your local machine  </p>
+
+<ul>
+<li>
+<code>git init</code> - this is the only way you can use your git commands</li>
+<li>You should see (username)<code>@github-learning:~/workspace/github-tutorial (master) $</code>
+</li>
+<li>Because your cloud 9 is connected to your GitHub, you don't need to do <code>git config</code>, which is how the local machine can recognize the account that is being used.</li>
+</ul>
+</li>
+</ol>
+
+<hr>
+
+<h2>
+<a id="repository-setup" class="anchor" href="#repository-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repository Setup</h2>
+
+<ol>
+<li>Go into GitHub and on your home page, click the green button that says '** + New repository**'</li>
+<li>Name file name in the '** Repository name**' box
+
+<ul>
+<li><em>MAKE SURE THAT YOU NAME IT THE <strong>EXACT</strong> SAME NAME AS THE FILE NAME IS IN YOUR LOCAL</em></li>
+</ul>
+</li>
+<li>Click the green button the says '<strong>Create repository</strong>'</li>
+<li>Because you have a local file, you can copy and paste the code that says
+
+<ul>
+<li>This code basically connects your remote(GitHub) to your local(Cloud 9) and when you push a change from your local file, it will automatically change as well in the remote file.</li>
+</ul>
+
+<pre><code>git remote add origin git@github.com:(your username)/README.md
+git push -u origin master
+</code></pre>
+</li>
+<li>Go back to Cloud 9 now and click open the <em>first-practice</em> folder and click open the <em>README.md</em> file</li>
+<li>Type "Hello World!" into the file
+
+<ul>
+<li>Make sure that the circle dot next to the file name in the tab is changed into an x by saving the file through file-&gt;save or hold the command key and press s.</li>
+</ul>
+</li>
+<li>Now type <code>git add .</code> to add all the files, in this case the only file, that you edited to the stage of the git, ready to be kept a copy of what you added into your file</li>
+<li>Then, type <code>git commit -m "Add Hello World! to the README file"</code>.
+
+<ul>
+<li>You are now keeping a copy of another version of your code, in this case what you added to your code.</li>
+<li>
+<em>ALWAYS WRITE YOUR COMMITS IN PRESENT TENSE</em> because when you refer back to this commit, you will know what you have to do to come to how the file looks now.</li>
+</ul>
+</li>
+<li>Finally, all you have to do now is type <code>git push</code> because you have already pushed the universal file to the remote. So, all you have to do now after every add and commit is to just do <code>git push</code>.
+
+<ul>
+<li>This pushes the changes that you have made and saved a copy of into the remote, GitHub.</li>
+</ul>
+</li>
+</ol>
+
+<hr>
+
+<h2>
+<a id="workflow--commands" class="anchor" href="#workflow--commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Workflow &amp; Commands</h2>
+
+<p>One more thing..</p>
+
+<ul>
+<li>When you type <code>git status</code>, this comman allows you to basically check the status of what you still need to add on to commit, making sure that you are keeping different versions of the code, in case you want to refer to previous code or made a mistake in the previous code.
+
+<ul>
+<li>If you have made changes to your README.md file and saved, when you type <code>git status</code>, You should see a lot of words on the top and then, <strong><code>modified:   README.md</code></strong> in red somewhere in the middle this means that you have saved the file but you need to place it on to the stage</li>
+<li>Once you have added the file to the stage, when you type <code>git status</code>, the <strong><code>modified:   README.md</code></strong> should turn green, showing that you have to commit it to keep a version of the code that you worked on.</li>
+<li>After commiting the file, it should say<br>
+<em>"On branch master<br>
+Your branch is ahead of 'origin/master' by 1 commit.<br>
+(use "git push" to publish your local commits)<br>
+nothing to commit, working directory clean"</em>, showing that you have kept a version of the edited file</li>
+<li>Finally, all you have to do now is push the file up into the remote and you now have the visual copy in GitHub.</li>
+</ul>
+</li>
+</ul>
+
+<p>Now that you know the basics to how you can connect your local machine to your remote machine and how to share it so that other people can see your code, or push your code, you can now practice on your own and see what amazing things you can do with Cloud 9 and GitHub.</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/JoanneF3188">JoanneF3188</a> can be found on <a href="https://github.com/JoanneF3188/github-tutorial">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
